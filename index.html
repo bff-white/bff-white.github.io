@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="鸡鸭的成语 - 收集与整理包含鸡、鸭等家禽意象的成语，提供释义、出处及用法示例，帮助用户了解汉语中与禽类相关的文化内涵。">
+    <meta name="keywords" content="鸡鸭的成语, 成语大全, 含鸡的成语, 含鸭的成语, 成语释义">
+    <title>鸡鸭的成语 - 汉语成语文化释义与分类查询</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown */
+            --secondary-color: #D2691E; /* Chocolate */
+            --accent-color: #F4A460; /* SandyBrown */
+            --bg-color: #F9F7F2; /* Off-white */
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0E0E0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Content Cards */
+        .idiom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .idiom-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .idiom-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+
+        .idiom-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+
+        .idiom-title {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .idiom-pinyin {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            font-family: "KaiTi", "STKaiti", serif;
+        }
+
+        .idiom-usage {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .idiom-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            background-color: #FFF0E0;
+            color: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .category-list li {
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            color: var(--text-main);
+        }
+
+        .category-list a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .count {
+            background: #eee;
+            color: #666;
+            padding: 0.1rem 0.4rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Detail Modal / Inline Section */
+        .detail-section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .detail-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .detail-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .detail-body {
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .detail-body p {
+            margin-bottom: 1rem;
+        }
+
+        .detail-body strong {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2C;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">成语<span>词典</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#chicken">含鸡</a></li>
+                    <li><a href="#duck">含鸭</a></li>
+                    <li><a href="#idiom-culture">文化释义</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>鸡鸭的成语</h1>
+            <p>探索汉语中关于鸡、鸭等家禽的成语典故，了解古人对这些动物的文化联想与寓意。</p>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <!-- Left Column: Content Grid -->
+        <div class="content-area">
+            <h2 class="section-title">精选成语释义</h2>
+            
+            <div class="idiom-grid">
+                <!-- Card 1 -->
+                <article class="idiom-card">
+                    <h3 class="idiom-title">鸡飞蛋打</h3>
+                    <div class="idiom-pinyin">jī fēi dàn dǎ</div>
+                    <p class="idiom-usage">比喻两头落空，一无所得。</p>
+                    <div class="idiom-tags">
+                        <span class="tag">贬义</span>
+                        <span class="tag">比喻</span>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="idiom-card">
+                    <h3 class="idiom-title">呆若木鸡</h3>
+                    <div class="idiom-pinyin">dāi ruò mù jī</div>
+                    <p class="idiom-usage">形容因恐惧或惊讶而发愣的样子，后也形容神态呆滞。</p>
+                    <div class="idiom-tags">
+                        <span class="tag">中性/贬义</span>
+                        <span class="tag">状态</span>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="idiom-card">
+                    <h3 class="idiom-title">鸭步鹅行</h3>
+                    <div class="idiom-pinyin">yā bù é xíng</div>
+                    <p class="idiom-usage">形容步态蹒跚，行动迟缓。</p>
+                    <div class="idiom-tags">
+                        <span class="tag">贬义</span>
+                        <span class="tag">形态</span>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="idiom-card">
+                    <h3 class="idiom-title">鸡鸣狗盗</h3>
+                    <div class="idiom-pinyin">jī míng gǒu dào</div>
+                    <p class="idiom-usage">指微不足道的技能，也比喻卑下的技能或行为。</p>
+                    <div class="idiom-tags">
+                        <span class="tag">中性</span>
+                        <span class="tag">技能</span>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="idiom-card">
+                    <h3 class="idiom-title">杀鸡儆猴</h3>
+                    <div class="idiom-pinyin">shā jī jǐng hóu</div>
+                    <p class="idiom-usage">惩罚一个人来警告其他人。</p>
+                    <div class="idiom-tags">
+                        <span class="tag">贬义</span>
+                        <span class="tag">手段</span>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="idiom-card">
+                    <h3 class="idiom-title">鸡口牛后</h3>
+                    <div class="idiom-pinyin">jī kǒu niú hòu</div>
+                    <p class="idiom-usage">宁愿做小而好的，也不做大而坏的。</p>
+                    <div class="idiom-tags">
+                        <span class="tag">中性</span>
+                        <span class="tag">选择</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Detailed Section -->
+            <div id="chicken" class="detail-section">
+                <div class="detail-header">
+                    <h2>呆若木鸡</h2>
+                    <span class="detail-meta">出自：《庄子·达生》</span>
+                </div>
+                <div class="detail-body">
+                    <p><strong>释义：</strong> 呆得像木头做成的鸡一样。形容因恐惧或惊讶而发愣的样子。</p>
+                    <p><strong>典故：</strong> 战国时期，纪渻子为周宣王养斗鸡。过了十天，周宣王问鸡养好了没有，纪渻子说还没好，这只鸡还虚浮骄傲，盛气凌人。又过了十天，周宣王又问，纪渻子说还是不行，它听到声音或看到影子，反应很快，心神还不稳定。又过了十天，纪渻子说差不多了，别的鸡叫声它听不见，目光凝聚不动，像只木鸡一样，别的鸡没有敢应战的。</p>
+                    <p><strong>用法：</strong> 常含贬义，形容因恐惧或惊讶而发愣的样子，有时也用于形容神态呆滞。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="widget-title">分类索引</h3>
+                <ul class="category-list">
+                    <li><a href="#"><span>含“鸡”字的成语</span> <span class="count">45+</span></a></li>
+                    <li><a href="#"><span>含“鸭”字的成语</span> <span class="count">12+</span></a></li>
+                    <li><a href="#"><span>含“鹅”字的成语</span> <span class="count">8+</span></a></li>
+                    <li><a href="#"><span>含“雀”字的成语</span> <span class="count">30+</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门搜索</h3>
+                <ul class="category-list">
+                    <li><a href="#">鸡犬不宁</a></li>
+                    <li><a href="#">鸡飞蛋打</a></li>
+                    <li><a href="#">偷鸡摸狗</a></li>
+                    <li><a href="#">小鸡肚肠</a></li>
+                    <li><a href="#">杀鸡取卵</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">文化延伸</h3>
+                <p style="font-size: 0.9rem; color: #666;">在中国传统文化中，鸡被称为“五德之禽”，寓意守信、勇武、好斗、仁慈、信义。鸭则常与水乡文化联系在一起，象征随遇而安。</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>成语词典</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">致力于为用户提供准确、全面的成语释义与文化背景解析。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">成语查询</a></li>
+                        <li><a href="#">成语故事</a></li>
+                        <li><a href="#">近义词反义词</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>关于我们</li>
+                        <li>版权声明</li>
+                        <li>使用帮助</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 成语词典文化网. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
