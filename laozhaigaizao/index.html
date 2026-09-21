@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="老宅改造网提供专业的老旧房屋翻新设计、施工案例、装修风格推荐及避坑指南。分享日式、北欧、新中式等风格改造方案，助您打造舒适宜居的新家。">
+    <meta name="keywords" content="老宅改造,老旧房屋翻新,房屋装修设计,室内改造案例,房屋翻新">
+    <title>老宅改造-专业老旧房屋翻新设计案例与施工指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B5E3C;
+            --secondary-color: #F5F1EB;
+            --accent-color: #D4A373;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #FAFAF9;
+            --bg-card: #FFFFFF;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-unit);
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #6d462b;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 32px;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/renovation_hero/1920/1080.jpg') center/cover no-repeat;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Case Studies Section */
+        .cases {
+            padding: 80px 0;
+            background-color: #F0EFEB;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-img-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .case-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .case-card:hover .case-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .case-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .case-card:hover .case-overlay {
+            opacity: 1;
+        }
+
+        .view-btn {
+            background: white;
+            color: var(--text-main);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .case-info {
+            padding: 24px;
+        }
+
+        .case-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .case-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .case-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Guide Section */
+        .guide {
+            padding: 80px 0;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-article {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .guide-article:last-child {
+            border-bottom: none;
+        }
+
+        .guide-article h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .guide-article p {
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .guide-sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: #F0EFEB;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), #6d462b);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            margin-bottom: 32px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.2rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .guide-layout { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { height: 500px; }
+            .hero h1 { font-size: 1.8rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v11H9V10z"/></svg>
+                <span>老宅改造</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#cases">改造案例</a></li>
+                    <li><a href="#guide">装修指南</a></li>
+                    <li><a href="#styles">设计风格</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>让老房子焕发新生，打造梦想中的温馨家园</h1>
+            <p>专业老旧房屋翻新设计、施工服务。从结构改造到软装搭配，我们提供一站式解决方案，助您留住时光的温度。</p>
+            <div style="margin-top: 30px;">
+                <a href="#cases" class="btn btn-primary">浏览案例</a>
+                <a href="#guide" class="btn btn-outline" style="color: white; border-color: white; margin-left: 10px;">查看指南</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>成功改造案例</p>
+            </div>
+            <div class="stat-item">
+                <h3>10年</h3>
+                <p>行业深耕经验</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>环保材料标准</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>专业设计师团队</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 class="section-title">为什么选择老宅改造？</h2>
+            <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">老旧房屋往往存在采光差、布局不合理、管线老化等问题。通过科学的改造，不仅能提升居住舒适度，更能大幅提升房产价值。</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-box">🏠</div>
+                <h3>空间重组</h3>
+                <p>打破原有僵化格局，通过拆除非承重墙，实现开放式空间设计，让光线与空气自由流动。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">💡</div>
+                <h3>采光优化</h3>
+                <p>针对老房采光不足的问题，采用落地窗、玻璃隔断等设计手法，引入自然光，告别昏暗。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box">🛠️</div>
+                <h3>结构加固</h3>
+                <p>专业团队进行房屋安全检测与加固，解决漏水、裂缝、电路老化等安全隐患。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="cases">
+        <div class="container">
+            <h2 class="section-title">热门改造案例</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active">全部风格</button>
+                <button class="filter-btn">日式简约</button>
+                <button class="filter-btn">北欧清新</button>
+                <button class="filter-btn">新中式</button>
+                <button class="filter-btn">复古工业</button>
+            </div>
+            <div class="cases-grid">
+                <article class="case-card">
+                    <div class="case-img-wrapper">
+                        <img src="https://picsum.photos/seed/renovation1/600/400" alt="老房改造客厅">
+                        <div class="case-overlay">
+                            <a href="#" class="view-btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-tags">
+                            <span class="tag">日式</span>
+                            <span class="tag">小户型</span>
+                        </div>
+                        <h3 class="case-title">60平米老房变日式静谧居所</h3>
+                        <div class="case-meta">
+                            <span>120㎡</span>
+                            <span>更新于 2天前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-img-wrapper">
+                        <img src="https://picsum.photos/seed/renovation2/600/400" alt="老房改造厨房">
+                        <div class="case-overlay">
+                            <a href="#" class="view-btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-tags">
+                            <span class="tag">北欧</span>
+                            <span class="tag">开放式厨房</span>
+                        </div>
+                        <h3 class="case-title">旧房厨房翻新，烹饪也成享受</h3>
+                        <div class="case-meta">
+                            <span>89㎡</span>
+                            <span>更新于 5天前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-img-wrapper">
+                        <img src="https://picsum.photos/seed/renovation3/600/400" alt="老房改造卧室">
+                        <div class="case-overlay">
+                            <a href="#" class="view-btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-tags">
+                            <span class="tag">新中式</span>
+                            <span class="tag">卧室</span>
+                        </div>
+                        <h3 class="case-title">新中式风格改造，传承东方韵味</h3>
+                        <div class="case-meta">
+                            <span>140㎡</span>
+                            <span>更新于 1周前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-img-wrapper">
+                        <img src="https://picsum.photos/seed/renovation4/600/400" alt="老房改造书房">
+                        <div class="case-overlay">
+                            <a href="#" class="view-btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-tags">
+                            <span class="tag">复古</span>
+                            <span class="tag">书房</span>
+                        </div>
+                        <h3 class="case-title">复古工业风，打造个性阅读空间</h3>
+                        <div class="case-meta">
+                            <span>75㎡</span>
+                            <span>更新于 2周前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-img-wrapper">
+                        <img src="https://picsum.photos/seed/renovation5/600/400" alt="老房改造卫生间">
+                        <div class="case-overlay">
+                            <a href="#" class="view-btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-tags">
+                            <span class="tag">现代</span>
+                            <span class="tag">卫生间</span>
+                        </div>
+                        <h3 class="case-title">老房卫生间干湿分离改造实录</h3>
+                        <div class="case-meta">
+                            <span>95㎡</span>
+                            <span>更新于 3周前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-img-wrapper">
+                        <img src="https://picsum.photos/seed/renovation6/600/400" alt="老房改造阳台">
+                        <div class="case-overlay">
+                            <a href="#" class="view-btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-tags">
+                            <span class="tag">阳台</span>
+                            <span class="tag">休闲</span>
+                        </div>
+                        <h3 class="case-title">阳台改造，城市里的绿色角落</h3>
+                        <div class="case-meta">
+                            <span>110㎡</span>
+                            <span>更新于 1个月前</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#" class="btn btn-outline">查看更多案例</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="guide container">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 class="section-title">老宅改造实用指南</h2>
+        </div>
+        <div class="guide-layout">
+            <div class="guide-content">
+                <article class="guide-article">
+                    <h3>第一步：房屋体检与预算规划</h3>
+                    <p>老宅改造的第一步是进行全面的房屋体检。重点检查墙体裂缝、地基沉降、电路老化程度以及水管腐蚀情况。根据房屋的实际情况，制定合理的改造预算。切勿盲目追求豪华装修，应优先解决安全隐患。</p>
+                    <p>建议预留总预算的10%-15%作为不可预见费用，以应对老房改造中可能出现的隐蔽工程问题。</p>
+                </article>
+                <article class="guide-article">
+                    <h3>第二步：拆除与结构加固</h3>
+                    <p>在正式施工前，需由专业设计师出具拆改方案。注意区分承重墙与非承重墙，严禁拆除承重结构。对于老旧房屋的楼板和梁柱，建议进行必要的加固处理，以确保新装修后的结构安全。</p>
+                </article>
+                <article class="guide-article">
+                    <h3>第三步：水电改造与隐蔽工程</h3>
+                    <p>老房的水电管线往往不达标，建议全部更换。电路方面，考虑增加回路，使用更安全的电线规格；水路方面，检查防水层是否失效，重新做闭水试验。这是老宅改造中最重要的环节之一。</p>
+                </article>
+            </div>
+            <aside class="guide-sidebar">
+                <h3>改造避坑清单</h3>
+                <ul class="check-list">
+                    <li>确认墙体是否承重</li>
+                    <li>电路老化必须全部更换</li>
+                    <li>防水工程需做48小时闭水试验</li>
+                    <li>老旧下水道建议全部更换</li>
+                    <li>门窗老化需及时更换密封条</li>
+                    <li>保留有价值的旧物进行翻新</li>
+                </ul>
+                <div style="margin-top: 30px; padding: 20px; background: var(--secondary-color); border-radius: 8px;">
+                    <h4 style="margin-bottom: 10px; color: var(--primary-color);">需要专业建议？</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 15px;">点击下方按钮，获取免费改造方案。</p>
+                    <button class="btn btn-primary" style="width: 100%;">获取免费方案</button>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; display: block;">常见问题解答</h2>
+            <div style="max-width: 800px; margin: 40px auto 0;">
+                <div class="faq-item">
+                    <div class="faq-question">老房改造的流程一般包括哪些？</div>
+                    <div class="faq-answer">老房改造通常包括：房屋测量与设计、拆除旧装修、水电改造、泥木工程、油漆工程、安装硬装以及最后的软装搭配。整个过程通常需要2-6个月不等，具体视房屋面积和复杂程度而定。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">老房子改造噪音和灰尘大吗？</div>
+                    <div class="faq-answer">是的，老房改造涉及拆除和敲墙，噪音和灰尘较大。建议在装修期间做好门窗密封，并告知邻居。同时，选择有经验的施工团队能更好地控制施工时间和扬尘。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">老房改造预算大概是多少？</div>
+                    <div class="faq-answer">老房改造的预算因房屋面积、翻新程度和所选材料而异。简单翻新（只做局部改造）每平米约1000-1500元；全面翻新（包含拆改、水电、硬装）每平米约1500-3000元。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">老房子改造后如何提高采光？</div>
+                    <div class="faq-answer">可以通过拆除非承重隔墙、扩大窗户面积、使用浅色系墙面涂料、安装明装轨道灯或镜面装饰来反射光线，从而有效改善室内采光。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>准备好开始您的老宅改造之旅了吗？</h2>
+            <p>无论您是想改善居住环境，还是想提升房产价值，我们都能为您提供专业的方案与服务。</p>
+            <a href="#" class="btn btn-primary" style="background-color: white; color: var(--primary-color);">立即咨询设计师</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v11H9V10z"/></svg>
+                        <span style="color: white;">老宅改造</span>
+                    </a>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">专注老旧房屋翻新设计服务，致力于为每一位业主打造舒适、环保、美观的居住空间。我们用心倾听，用专业服务回报您的信任。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">改造案例</a></li>
+                        <li><a href="#">设计风格</a></li>
+                        <li><a href="#">服务流程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">免费量房</a></li>
+                        <li><a href="#">在线报价</a></li>
+                        <li><a href="#">施工监控</a></li>
+                        <li><a href="#">售后保障</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@laozhai.com</li>
+                        <li>地址：北京市朝阳区设计产业园A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 老宅改造网 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentNode;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Filter Button Logic (Visual only for demo)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const mainNav = document.querySelector('.main-nav');
+        
+        mobileBtn.addEventListener('click', () => {
+            if (mainNav.style.display === 'block') {
+                mainNav.style.display = 'none';
+            } else {
+                mainNav.style.display = 'block';
+                mainNav.style.position = 'absolute';
+                mainNav.style.top = '70px';
+                mainNav.style.left = '0';
+                mainNav.style.width = '100%';
+                mainNav.style.background = 'white';
+                mainNav.style.padding = '20px';
+                mainNav.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+      </html>
