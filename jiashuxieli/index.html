@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="家属谢礼选购指南，涵盖商务答谢、亲友慰问、乔迁新居、升学宴等场景的实用礼品推荐与注意事项，帮助您选择得体、有分寸的谢礼方案。">
+    <meta name="keywords" content="家属谢礼,商务答谢,乔迁礼物,升学宴礼物,礼品推荐,人情往来">
+    <title>家属谢礼-得体商务与亲友慰问礼品选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+            overflow: hidden;
+        }
+        
+        .card-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .link-text {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Guide List */
+        .guide-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .guide-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .guide-item:last-child {
+            border-bottom: none;
+        }
+
+        .guide-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f2f5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .guide-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 4rem 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .feature-box {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .feature-num {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #eee;
+            line-height: 1;
+        }
+
+        .feature-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            padding: 3rem 1rem 1rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            color: #95a5a6;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .guide-item {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/></svg>
+                礼尚<span>网</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">商务答谢</a></li>
+                    <li><a href="#">亲友慰问</a></li>
+                    <li><a href="#">选购指南</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>得体家属谢礼指南</h1>
+        <p>无论是商务合作结束后的感谢，还是亲友帮衬后的回馈，一份精心挑选的家属谢礼都能传递您的诚意与尊重。</p>
+        <a href="#guide" class="cta-btn">查看推荐方案</a>
+    </section>
+
+    <main class="container">
+        <!-- 场景推荐 -->
+        <section id="recommendations">
+            <div class="section-title">
+                <h2>热门谢礼场景推荐</h2>
+                <p>根据不同关系与场合，选择最适合的礼品方案</p>
+            </div>
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/tea/400/250" alt="高档茶叶礼盒">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">商务合作</span>
+                        <h3>商务合作伙伴家属谢礼</h3>
+                        <p>针对合作伙伴家属的礼品，应注重包装的正式感与实用性。推荐高档茶叶、地方特色特产或定制礼篮，避免过于私密的个人用品。</p>
+                        <div class="card-footer">
+                            <span class="price">¥800 - ¥2,000</span>
+                            <a href="#" class="link-text">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/wine/400/250" alt="红酒礼盒">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">乔迁新居</span>
+                        <h3>乔迁新居贺礼</h3>
+                        <p>乔迁之喜寓意“步步高升”。推荐寓意吉祥的家居摆件、高档食用油、坚果礼盒或高档酒水，既体面又符合生活需求。</p>
+                        <div class="card-footer">
+                            <span class="price">¥500 - ¥1,500</span>
+                            <a href="#" class="link-text">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-img-placeholder">
+                        <img src="https://picsum.photos/seed/fruit/400/250" alt="进口水果礼盒">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">亲友探望</span>
+                        <h3>亲友帮衬致谢礼</h3>
+                        <p>对于亲友的日常帮衬，礼品不宜过于昂贵以免造成心理负担。新鲜水果、牛奶、酸奶或现烤点心是安全且受欢迎的选择。</p>
+                        <div class="card-footer">
+                            <span class="price">¥200 - ¥500</span>
+                            <a href="#" class="link-text">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 选购指南 -->
+        <section id="guide" style="margin-top: 4rem;">
+            <div class="section-title">
+                <h2>家属谢礼选购核心原则</h2>
+                <p>掌握这几点，让您的谢礼既体面又得体</p>
+            </div>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <div class="guide-icon">1</div>
+                    <div class="guide-content">
+                        <h3>考虑对方生活习惯</h3>
+                        <p>送礼前最好了解对方家属的饮食偏好（如是否饮酒、是否有过敏史）和生活习惯。例如，有老人的家庭适合送无糖或低糖食品。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">2</div>
+                    <div class="guide-content">
+                        <h3>注重包装与寓意</h3>
+                        <p>家属谢礼的包装应整洁大方。避免使用过于花哨或寓意不吉利的图案。选择包装上印有“福”、“喜”等吉祥字样的产品会更受欢迎。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">3</div>
+                    <div class="guide-content">
+                        <h3>控制预算与分量</h3>
+                        <p>谢礼的价值应与您与对方的关系及帮忙的程度成正比。过于贵重的礼物可能会让对方产生不必要的心理负担，适得其反。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">4</div>
+                    <div class="guide-content">
+                        <h3>避免过于私密的物品</h3>
+                        <p>对于家属谢礼，应避免赠送贴身衣物、香水等过于私密的物品。选择家居用品、食品或书籍等公共性质较强的物品更为稳妥。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能特点 -->
+        <section class="features">
+            <div class="section-title">
+                <h2>为什么选择礼尚网</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-num">01</div>
+                    <div class="feature-text">
+                        <h4>场景化推荐</h4>
+                        <p>针对商务、亲友、乔迁等不同场景，提供精准的礼品筛选方案。</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-num">02</div>
+                    <div class="feature-text">
+                        <h4>品质严选</h4>
+                        <p>所有推荐商品均经过严格筛选，确保食品安全与包装精美。</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-num">03</div>
+                    <div class="feature-text">
+                        <h4>配送无忧</h4>
+                        <p>提供同城闪送与全国包邮服务，确保谢礼准时送达。</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-num">04</div>
+                    <div class="feature-text">
+                        <h4>售后保障</h4>
+                        <p>支持无理由退换货，让您购买更放心。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>礼尚网</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.6;">
+                    专注于提供最得体的家属谢礼解决方案，帮助您妥善处理人情往来，传递真诚心意。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">商务答谢</a></li>
+                    <li><a href="#">亲友慰问</a></li>
+                    <li><a href="#">乔迁贺礼</a></li>
+                    <li><a href="#">新品上市</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">配送说明</a></li>
+                    <li><a href="#">退换货政策</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 礼尚网 版权所有. 本站内容仅供参考，不构成购买建议。
+        </div>
+    </footer>
+
+</body>
+</html>
