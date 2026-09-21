@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩志文官方主页，展示韩志文的个人作品、艺术风格、设计理念及创作历程。提供高清作品集浏览、作品详情介绍及艺术交流服务。">
+    <meta name="keywords" content="韩志文, 韩志文作品, 韩志文设计, 韩志文艺术, 个人主页">
+    <title>韩志文-个人作品与艺术创作展示平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .btn-contact {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-contact:hover {
+            background-color: #34495e;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://picsum.photos/seed/artstudio/1920/1080') center/cover no-repeat;
+            opacity: 0.3;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 220px;
+            width: 100%;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(44, 62, 80, 0.8);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .card-link {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Services/Process */
+        .services-section {
+            background-color: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: border-color 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-item h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .service-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>韩</span>志文
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#portfolio">作品集</a></li>
+                    <li><a href="#services">服务</a></li>
+                    <li><a href="#contact">联系</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn-contact">预约咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>韩志文：专注视觉设计与艺术创作</h1>
+                <p>探索创意的边界，用设计语言讲述独特的故事。致力于为客户提供专业、创新且富有感染力的视觉解决方案。</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn btn-primary">浏览作品</a>
+                    <a href="#about" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/artist/600/600" alt="韩志文工作室环境">
+                    </div>
+                    <div class="about-text">
+                        <h2>关于韩志文</h2>
+                        <p>韩志文是一位拥有多年经验的设计师与艺术家，专注于平面设计、品牌视觉形象以及数字艺术创作。他的作品风格独特，善于捕捉光影与色彩的细微变化，将传统美学与现代设计理念完美融合。</p>
+                        <p>在多年的职业生涯中，韩志文曾服务过多家知名企业，积累了丰富的实战经验。他坚信设计不仅仅是装饰，更是解决问题的工具。每一个项目，他都会深入理解客户需求，力求在视觉呈现与功能逻辑之间找到最佳平衡点。</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h3>10+</h3>
+                                <p>年从业经验</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>200+</h3>
+                                <p>完成项目</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>50+</h3>
+                                <p>合作客户</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">精选作品集</h2>
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <article class="portfolio-card">
+                        <div class="card-img">
+                            <span class="card-category">品牌设计</span>
+                            <img src="https://picsum.photos/seed/brand1/400/300" alt="品牌视觉识别系统设计">
+                        </div>
+                        <div class="card-content">
+                            <h3>未来科技品牌形象</h3>
+                            <p>为一家新兴科技公司打造的完整视觉识别系统，包含Logo设计、VI手册及辅助图形应用。</p>
+                            <a href="#" class="card-link">查看详情</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="portfolio-card">
+                        <div class="card-img">
+                            <span class="card-category">插画艺术</span>
+                            <img src="https://picsum.photos/seed/art2/400/300" alt="城市印象系列插画">
+                        </div>
+                        <div class="card-content">
+                            <h3>城市印象系列插画</h3>
+                            <p>通过手绘风格表现都市生活的快节奏与人文温度，用于书籍封面及艺术展览。</p>
+                            <a href="#" class="card-link">查看详情</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="portfolio-card">
+                        <div class="card-img">
+                            <span class="card-category">UI/UX设计</span>
+                            <img src="https://picsum.photos/seed/ui3/400/300" alt="移动端应用界面设计">
+                        </div>
+                        <div class="card-content">
+                            <h3>极简主义APP界面</h3>
+                            <p>专注于用户体验的移动端应用设计，界面简洁流畅，提升了用户操作的愉悦感。</p>
+                            <a href="#" class="card-link">查看详情</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="portfolio-card">
+                        <div class="card-img">
+                            <span class="card-category">平面设计</span>
+                            <img src="https://picsum.photos/seed/poster4/400/300" alt="艺术展览海报设计">
+                        </div>
+                        <div class="card-content">
+                            <h3>光影艺术展海报</h3>
+                            <p>运用大胆的排版与色彩对比，营造出强烈的视觉冲击力，吸引观众入场。</p>
+                            <a href="#" class="card-link">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title">服务领域</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">🎨</div>
+                        <h3>品牌视觉设计</h3>
+                        <p>Logo设计、企业VI系统、品牌包装与推广物料设计。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">💻</div>
+                        <h3>UI/UX 交互设计</h3>
+                        <p>网页界面设计、移动端App设计、用户流程分析与原型制作。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🖼️</div>
+                        <h3>商业插画创作</h3>
+                        <p>产品插画、概念设计、宣传插图及商业授权插画绘制。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">✍️</div>
+                        <h3>视觉创意策划</h3>
+                        <p>从创意构思到最终落地执行的全案视觉策划服务。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">联系与合作</h2>
+                <div style="max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: var(--border-radius); box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，韩志文会尽快与您联系。');">
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">姓名</label>
+                            <input type="text" id="name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" placeholder="请输入您的称呼" required>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">邮箱</label>
+                            <input type="email" id="email" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;" placeholder="example@email.com" required>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">留言内容</label>
+                            <textarea id="message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; resize: vertical;" placeholder="请描述您的需求或合作意向..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem; color: #fff;">
+                        <span>韩</span>志文
+                    </div>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">专注于视觉设计与艺术创作，用设计连接创意与现实。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#portfolio">作品展示</a></li>
+                        <li><a href="#services">服务项目</a></li>
+                        <li><a href="#about">关于作者</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱: contact@hanzhiwen.art</li>
+                        <li>电话: +86 138 0000 0000</li>
+                        <li>地址: 中国·上海市创意园区A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 韩志文个人主页. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
