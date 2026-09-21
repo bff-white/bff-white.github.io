@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="烈焰战神-东方玄幻史诗级战斗体验，海量角色养成，极致视听盛宴。提供烈焰战神手游下载、攻略指南、角色图鉴及最新活动资讯。">
+    <meta name="keywords" content="烈焰战神, 烈焰战神手游, 玄幻游戏, 攻略, 下载">
+    <title>烈焰战神-热血玄幻手游下载与实战攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4d00;
+            --secondary-color: #ff9e00;
+            --bg-dark: #0f0c0a;
+            --bg-card: #1a1614;
+            --text-main: #ffffff;
+            --text-sub: #b3a398;
+            --border-color: #3a2f2a;
+            --gradient-fire: linear-gradient(135deg, #ff4d00 0%, #ff9e00 100%);
+            --shadow-card: 0 4px 20px rgba(255, 77, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-sub);
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 12, 10, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-download {
+            background: var(--gradient-fire);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 77, 0, 0.4);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 77, 0, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #2a1a10 0%, #0f0c0a 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDQ1LDAsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgNDBMMTQwIDBIMjBMMjAgMjBaIi8+PC9zdmc+');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 77, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 13px 38px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--bg-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Game Content Section */
+        .game-content {
+            padding: 80px 0;
+            background: #14110e;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .game-card:hover {
+            box-shadow: var(--shadow-card);
+            border-color: var(--secondary-color);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #2a201c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-img-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.8));
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background: rgba(255, 77, 0, 0.2);
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .sidebar-section {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .guide-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guide-list a {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-list a:hover {
+            color: var(--secondary-color);
+        }
+
+        .guide-list small {
+            color: var(--text-sub);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--bg-dark);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 77, 0, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-sub);
+            display: none;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background: #080605;
+            padding: 50px 0 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-sub);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-wrapper { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .content-wrapper { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>🔥</span> 烈焰战神
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#features">游戏特色</a></li>
+                    <li><a href="#guide">攻略图鉴</a></li>
+                    <li><a href="#download">下载专区</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="btn-download">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>燃动神界，主宰战场<br><span style="font-size: 0.6em; color: var(--secondary-color);">烈焰战神 · 东方玄幻</span></h1>
+                <p>重燃热血，重返上古神界。数百种神装自由搭配，极致连招体验，打造你的专属战神传奇。</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="simulateDownload()">
+                        <span>📥</span> 安装游戏
+                    </button>
+                    <button class="btn-secondary" onclick="window.location.href='#guide'">
+                        查看新手攻略
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">游戏核心特色</h2>
+                <p class="section-subtitle">硬核战斗 · 自由养成 · 极致视听</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚔️</div>
+                        <h3>热血动作战斗</h3>
+                        <p>摒弃传统自动战斗，引入即时技能释放与连招系统，每一次出手都充满爽快感。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>多元神装养成</h3>
+                        <p>装备、翅膀、坐骑、神兵全面养成，通过洗练与镶嵌打造独一无二的神级战力。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>跨服竞技争霸</h3>
+                        <p>全服玩家同台竞技，攻城略地，争夺神界霸主地位，体验万人同屏的震撼场面。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>社交公会系统</h3>
+                        <p>结交盟友，组建公会，参与大型团队副本，在合作与对抗中结下深厚羁绊。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Content / Guide Section -->
+        <section id="guide" class="game-content">
+            <div class="container">
+                <h2 class="section-title">热门攻略与资讯</h2>
+                <p class="section-subtitle">掌握核心玩法，快速提升战力</p>
+                <div class="content-wrapper">
+                    <!-- Main Grid -->
+                    <div class="card-grid">
+                        <article class="game-card">
+                            <div class="card-img-placeholder">⚔️</div>
+                            <div class="card-body">
+                                <h3 class="card-title">新手入门：战神之路起点</h3>
+                                <div class="card-meta">
+                                    <span class="tag">新手必读</span>
+                                    <span>10-15分钟</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <div class="card-img-placeholder">🐉</div>
+                            <div class="card-body">
+                                <h3 class="card-title">BOSS攻略：深渊魔龙挑战指南</h3>
+                                <div class="card-meta">
+                                    <span class="tag">副本</span>
+                                    <span>5分钟阅读</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <div class="card-img-placeholder">💰</div>
+                            <div class="card-body">
+                                <h3 class="card-title">资源分配：如何最大化收益</h3>
+                                <div class="card-meta">
+                                    <span class="tag">进阶技巧</span>
+                                    <span>8分钟阅读</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <div class="card-img-placeholder">👑</div>
+                            <div class="card-body">
+                                <h3 class="card-title">PVP竞技：攻城战获胜秘籍</h3>
+                                <div class="card-meta">
+                                    <span class="tag">竞技</span>
+                                    <span>12分钟阅读</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">热门榜单</h3>
+                            <ul class="guide-list">
+                                <li>
+                                    <a href="#">🔥 热门推荐：最新版本更新内容</a>
+                                    <small>更新于 2小时前</small>
+                                </li>
+                                <li>
+                                    <a href="#">⭐ 角色排行：T0级战神推荐</a>
+                                    <small>阅读量 5w+</small>
+                                </li>
+                                <li>
+                                    <a href="#">🎁 活动预告：周年庆典开启</a>
+                                    <small>福利多多</small>
+                                </li>
+                                <li>
+                                    <a href="#">💡 避坑指南：新手常见误区</a>
+                                    <small>干货满满</small>
+                                </li>
+                                <li>
+                                    <a href="#">📜 角色图鉴：神兽养成全解析</a>
+                                    <small>图鉴大全</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-section" style="margin-top: 20px; background: #221b18; border-color: #4a3b32;">
+                            <h3 class="sidebar-title">官方社群</h3>
+                            <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">加入玩家交流群，获取一手资讯。</p>
+                            <div style="background: #000; padding: 10px; border-radius: 4px; border: 1px dashed #555;">
+                                <span style="color: var(--primary-color);">QQ群号：</span> 123456789
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">游戏需要联网吗？支持离线玩吗？</div>
+                        <div class="faq-answer">游戏支持多平台互通，需要联网进行数据同步。部分剧情模式可在离线状态下体验，但无法进行跨服竞技或社交互动。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何下载和安装烈焰战神？</div>
+                        <div class="faq-answer">您可以在本站点击“立即下载”按钮，获取适配您设备的安装包。安装包经过安全检测，请放心使用。支持安卓与iOS双端。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">游戏是否免费？包含内购吗？</div>
+                        <div class="faq-answer">烈焰战神是一款完全免费的游戏，核心玩法免费开放。游戏内设有付费道具（如外观、加速道具等），玩家可根据意愿选择是否消费。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">账号数据丢失了怎么办？</div>
+                        <div class="faq-answer">请确保您在登录时使用了正确的官方账号（如微信、QQ或手机号）。如果发生数据丢失，请联系官方客服并提供注册凭证进行查询。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download CTA Section -->
+        <section id="download" style="padding: 80px 0; background: linear-gradient(to bottom, #14110e, #0f0c0a); text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-color);">准备好挑战神界了吗？</h2>
+                <p style="color: var(--text-sub); margin-bottom: 40px; font-size: 1.1rem;">数百万玩家已在此集结，等待你的加入。</p>
+                <button class="btn-primary" onclick="simulateDownload()" style="font-size: 1.3rem; padding: 20px 60px;">
+                    🚀 立即免费下载游戏
+                </button>
+                <div style="margin-top: 30px; font-size: 0.85rem; color: #555;">
+                    安全扫描通过 · 100%纯净版 · 无需注册即可体验
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">游戏规则</a>
+                <a href="#">隐私政策</a>
+                <a href="#">联系客服</a>
+                <a href="#">意见反馈</a>
+            </div>
+            <p class="copyright">
+                © 2023 烈焰战神官方网站. All Rights Reserved. <br>
+                本站为游戏资料展示平台，非游戏官方网站。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Simple Download Simulation
+        function simulateDownload() {
+            // In a real scenario, this would trigger the download
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '正在连接服务器...';
+            btn.style.opacity = '0.8';
+            
+            setTimeout(() => {
+                btn.innerHTML = '✅ 下载已开始';
+                btn.style.background = '#28a745';
+                btn.style.opacity = '1';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                }, 3000);
+            }, 1500);
+        }
+    </script>
+</body>
+                  </html>
